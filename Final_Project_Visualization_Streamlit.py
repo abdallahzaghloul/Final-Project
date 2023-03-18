@@ -9,7 +9,7 @@ from imblearn.over_sampling import SMOTE
 import itertools
 import pandas_profiling as pp #3 
 from math import ceil #4
-import seaborn as sns #5
+
 import plotly.graph_objects as go  #6
 import plotly.express as px  #7
 from plotly.subplots import make_subplots  #8
