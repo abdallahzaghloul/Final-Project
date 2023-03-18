@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd   
 from imblearn.over_sampling import SMOTE
 import itertools
-import pandas_profiling as pp #3 
+
 from math import ceil #4
 
 import plotly.graph_objects as go  #6
@@ -14,13 +14,9 @@ from plotly.subplots import make_subplots  #8
 from sklearn.model_selection import train_test_split  #9 
 
 from datasist.structdata import detect_outliers #14 
-import matplotlib as mpl #15
-from geopy.distance import great_circle#17
-from datetime import datetime #18
+
 from scipy import stats #19
-from collections import Counter #20
 import plotly.figure_factory as ff #21
-from geopy.geocoders import Nominatim #22
 from category_encoders import BinaryEncoder #23
 
 
