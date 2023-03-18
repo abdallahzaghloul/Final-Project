@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd   
 from imblearn.over_sampling import SMOTE
 import itertools
-
+import streamlit as st
 from math import ceil #4
 
 import plotly.graph_objects as go  #6
