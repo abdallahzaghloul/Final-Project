@@ -3,8 +3,6 @@ import warnings
 warnings.filterwarnings('ignore')
 import numpy as np
 import pandas as pd   
-
-import seaborn as sns
 from imblearn.over_sampling import SMOTE
 import itertools
 import pandas_profiling as pp #3 
