@@ -191,6 +191,8 @@ Capital_Gain = st.number_input('Enter your capital gain')
 Capital_Loss = st.number_input('Enter your capital loss') 
 
 
+Relationship = st.selectbox("Select your relationship status",(' Not-in-family' ,' Husband' ,' Wife', ' Own-child' ,' Unmarried',' Other-relative'))
+Workclass = st.selectbox("Select your workclass",(' State-gov' ,' Self-emp-not-inc', ' Private' ,' Federal-gov', ' Local-gov',' Self-emp-inc' ,' Without-pay' ))
 
 
 
