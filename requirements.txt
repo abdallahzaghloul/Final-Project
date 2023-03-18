@@ -10,11 +10,7 @@ imblearn
 Category-encoders
 
 
-scikit-metrics
-Scikit-learn
-
-Scikit-metrics
-scikit-learn
+scikit-learn>=0.18
 
 
 
