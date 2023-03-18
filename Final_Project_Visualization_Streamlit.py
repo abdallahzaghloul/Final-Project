@@ -100,7 +100,7 @@ from sklearn.model_selection import GridSearchCV
 
 param_grid = {'n_estimators': [100,140,130,120], 'max_depth': [60,50,70]}
 
-grid = GridSearchCV(rf, param_grid, cv=3, scoring='roc_auc', n_jobs=-1)
+grid = GridSearchCV(rf, param_grid, cv=3, scoring='f1', n_jobs=-1)
 grid.fit(X_train_sm, y_train_sm)
 
 
