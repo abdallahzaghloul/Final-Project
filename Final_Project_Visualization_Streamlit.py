@@ -204,7 +204,7 @@ Y = rf.predict(df1)
 
 if Y==1:
     st.write(f'The expected salary would be >50K ')
-else 
+else:
     st.write(f'The expected salary would be less than or = 50 K ')
 
 
