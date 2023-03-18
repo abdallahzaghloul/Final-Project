@@ -197,7 +197,7 @@ Marital_Status =st.selectbox("Select your mzrital status",(' Never-married' ,' M
   
 dic = {'AGE': [Age], 'WORK_CLASS': [Workclass],'EDUCATION_NUMBER':[Education_Number], 'MARITAL_STATUS':[Marital_Status] , 'OCCUPATION':[Occupation] , 'RELATIONSHIP':[Relationship] , 'RACE':[Race] , 'SEX':[Sex], 'CAPITAL_GAIN':[Capital_Gain], 'CAPITAL_LOSS':[Capital_Loss], 'HRS/WEEK':[HRS_WK],'NATIVE_COUNTRY':[Native_Country]}
 df1 = pd.DataFrame(dic)
-
+df1=df1.T
 rf = RandomForestClassifier(random_state=42, n_estimators=grid.best_params_['n_estimators'], max_depth=grid.best_params_['max_depth'])
 rf.fit(X_train_sm, y_train_sm)
 Y = rf.predict(df1)
