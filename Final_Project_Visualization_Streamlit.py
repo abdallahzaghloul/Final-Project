@@ -41,7 +41,7 @@ df['TARGET'] = df.TARGET.str.replace('<=50K','0').str.replace('>50K','1')
 df['TARGET']=df.TARGET.astype('float')
 
 
-df.drop(['EDUCATION'], axis=1, inplace=True)
+df.drop(['EDUCATION','FNLWGT'], axis=1, inplace=True)
 df.dropna(axis=0, inplace= True)
 
 
