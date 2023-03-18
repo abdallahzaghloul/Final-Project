@@ -29,7 +29,7 @@ from sklearn.ensemble import RandomForestClassifier
 df = pd.read_csv('Adult.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
 df.columns  = [i.replace(' ','_') for i in df.columns]
 df.columns  = [i.upper() for i in df.columns]
-df.head(3)
+
 
 df['TARGET'] = df.TARGET.str.replace('<=50K','0').str.replace('>50K','1')
 df['TARGET']=df.TARGET.astype('float')
@@ -66,7 +66,7 @@ df.NATIVE_COUNTRY=df.NATIVE_COUNTRY.str.replace(' ','')
 
 
 
-fig5 = px.imshow(df.corr()) 
+#fig5 = px.imshow(df.corr()) 
 
 
 
@@ -120,8 +120,8 @@ y_pred = rf.predict(X_test_enc)
 
 
 # Feature Importance
-importances = pd.DataFrame({'feature':X_train_enc.columns, 'importance':np.round(rf.feature_importances_,3)})
-importances = importances.sort_values('importance', ascending=False).set_index('feature')
+#importances = pd.DataFrame({'feature':X_train_enc.columns, 'importance':np.round(rf.feature_importances_,3)})
+#importances = importances.sort_values('importance', ascending=False).set_index('feature')
 
 
 
