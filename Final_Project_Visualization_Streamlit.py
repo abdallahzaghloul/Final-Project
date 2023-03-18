@@ -23,7 +23,7 @@ from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder , MinMaxScaler ,
 from sklearn.linear_model import LinearRegression  #13
 from sklearn.model_selection import train_test_split
 #from sklearn.metrics import accuracy_score, confusion_matrix, plot_confusion_matrix , r2_score  ,mean_squared_error , mutual_info_score,roc_auc_score
-from sklearn.metrics import plot_confusion_matrix
+#from sklearn.metrics import plot_confusion_matrix
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -112,7 +112,7 @@ lr = LogisticRegression(random_state=42)
 lr.fit(X_train_sm, y_train_sm)
 y_pred = lr.predict(X_test_enc)
 
-fig_cm1 = plot_confusion_matrix(lr, X_test_enc, y_test, cmap='Blues', values_format='d')
+#fig_cm1 = plot_confusion_matrix(lr, X_test_enc, y_test, cmap='Blues', values_format='d')
 
 
 
@@ -120,7 +120,7 @@ rf = RandomForestClassifier(random_state=42)
 rf.fit(X_train_sm, y_train_sm)
 y_pred = rf.predict(X_test_enc)
 
-fig_cm2= plot_confusion_matrix(rf, X_test_enc, y_test, cmap='Blues', values_format='d')
+#fig_cm2= plot_confusion_matrix(rf, X_test_enc, y_test, cmap='Blues', values_format='d')
 
 
 # Feature Importance
@@ -144,7 +144,7 @@ rf = RandomForestClassifier(random_state=42, n_estimators=120, max_depth=35)
 rf.fit(X_train_sm, y_train_sm)
 y_pred = rf.predict(X_test_enc)
 
-fig_cm2=plot_confusion_matrix(rf, X_test_enc, y_test, cmap='Blues', values_format='d')
+#fig_cm3=plot_confusion_matrix(rf, X_test_enc, y_test, cmap='Blues', values_format='d')
 
 
 import pickle
