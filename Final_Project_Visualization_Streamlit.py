@@ -40,8 +40,8 @@ df.columns  = [i.upper() for i in df.columns]
 df.head(3)
 
 
-pd.set_option('mode.chained_assignment',None)
-sns.set(rc={'figure.figsize':(12,12)}, font_scale = 1.3)
+#pd.set_option('mode.chained_assignment',None)
+#sns.set(rc={'figure.figsize':(12,12)}, font_scale = 1.3)
 
 df.drop(['EDUCATION'], axis=1, inplace=True)
 df.dropna(axis=0, inplace= True)
