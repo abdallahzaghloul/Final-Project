@@ -167,7 +167,7 @@ st.write(df1)
 Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX','NATIVE_COUNTRY']
 Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
 
-df1_=encoder.transform(df1) 
+df1_=encoder.transform(df1[Catego1]) 
 df1_=scaler.transform(df1_[Numero1])
 
 Y = rf.predict(df1_)
