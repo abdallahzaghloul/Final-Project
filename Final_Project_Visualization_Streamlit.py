@@ -175,6 +175,7 @@ im = Image.open("50K$.jpg")
 image = np.array(im)
 st.image(image)
 
+AGE=st.slider('Select your age',1,100)
 
 
 
