@@ -175,9 +175,9 @@ pickle.dump(rf, open(filename, 'wb'))
 st.markdown(" <center>  <h1> Predicting Adult's Annual Salary </h1> </font> </center> </h1> ",
             unsafe_allow_html=True)
 
-im = Image.open("C://Users//hp//Desktop//Data Science//Final Project//50K$.jpg")
+
 im = Image.open("50K$.jpg")
-#image = np.array(im)
+image = np.array(im)
 st.image(image)
 
 
