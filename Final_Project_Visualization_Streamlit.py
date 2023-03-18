@@ -100,10 +100,7 @@ rf = RandomForestClassifier(random_state=42)
 rf.fit(X_train_sm, y_train)
 y_pred = rf.predict(X_test_sm)
 
-plot_confusion_matrix(rf, X_test_enc, y_test, cmap='Blues', values_format='d')
 
-# Grid Search
-# Grid Search
 # Grid Search
 from sklearn.model_selection import GridSearchCV
 
@@ -115,11 +112,6 @@ grid.fit(X_train_sm, y_train_sm)
 
 rf = RandomForestClassifier(random_state=42, n_estimators=grid.best_params_['n_estimators'], max_depth=grid.best_params_['max_depth'])
 rf.fit(X_train_sm, y_train_sm)
-
-
-#fig_cm3=plot_confusion_matrix(rf, X_test_enc, y_test, cmap='Blues', values_format='d')
-
-
     
 st.markdown(" <center>  <h1> Predicting Adult's Annual Salary </h1> </font> </center> </h1> ",
             unsafe_allow_html=True)
