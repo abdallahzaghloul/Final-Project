@@ -44,7 +44,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 #Reading & Ecxploting  Data
 
-df = pd.read_csv('C:/Users/hp/Desktop/Data Science/Final Project/Adult.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
+df = pd.read_csv('Adult.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
 df.columns  = [i.replace(' ','_') for i in df.columns]
 df.columns  = [i.upper() for i in df.columns]
 df.head(3)
@@ -179,7 +179,7 @@ def predict(user):
 st.markdown(" <center>  <h1> Predicting Adult's Chance to get >50 </h1> </font> </center> </h1> ",
             unsafe_allow_html=True)
 
-im = Image.open("C://Users//hp//Desktop//Data Science//Final Project//50K$.jpg")
+im = Image.open("50K$.jpg")
 image = np.array(im)
 st.image(image)
 
