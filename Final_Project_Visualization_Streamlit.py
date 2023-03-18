@@ -5,7 +5,9 @@ import numpy as np
 import pandas as pd   
 from imblearn.over_sampling import SMOTE
 import streamlit as st
+import plotly.graph_objects as go  #6
 import plotly.express as px  #7
+from plotly.subplots import make_subplots 
 from sklearn.model_selection import train_test_split  #9 
 
 
