@@ -13,8 +13,6 @@ import plotly.express as px  #7
 from plotly.subplots import make_subplots  #8
 from sklearn.model_selection import train_test_split  #9 
 
-from datasist.structdata import detect_outliers #14 
-
 from scipy import stats #19
 import plotly.figure_factory as ff #21
 from category_encoders import BinaryEncoder #23
