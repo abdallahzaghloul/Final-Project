@@ -6,20 +6,15 @@ import pandas as pd
 from imblearn.over_sampling import SMOTE
 import itertools
 import streamlit as st
-from math import ceil #4
-import plotly.graph_objects as go  #6
 import plotly.express as px  #7
-from plotly.subplots import make_subplots  #8
 from sklearn.model_selection import train_test_split  #9 
 
 from scipy import stats #19
-import plotly.figure_factory as ff #21
 from category_encoders import BinaryEncoder #23
 
 
 from sklearn.impute import SimpleImputer  #11
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder , MinMaxScaler , StandardScaler, RobustScaler #12
-from sklearn.linear_model import LinearRegression  #13
 from sklearn.model_selection import train_test_split
 
 from sklearn.linear_model import LogisticRegression
