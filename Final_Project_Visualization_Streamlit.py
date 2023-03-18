@@ -170,7 +170,7 @@ Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
 df1_enc=encoder.transform(df1) 
 df1_enc[Numero1]=scaler.transform(df1_enc[Numero1])
 
-Y = rf.predict(df1_)
+Y = rf.predict(df1_enc)
 
 
 if st.button('Calculate'):
