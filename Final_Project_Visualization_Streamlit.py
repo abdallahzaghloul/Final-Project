@@ -163,7 +163,7 @@ df1['RELATIONSHIP'].iloc[0]=Relationship
 df1['WORK_CLASS'].iloc[0]=Workclass
 df1['MARITAL_STATUS'].iloc[0]=Marital_Status
 
-
+st.write(df1)
 Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX','NATIVE_COUNTRY']
 Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
 
