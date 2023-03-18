@@ -168,7 +168,7 @@ Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX',
 Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
 
 df1_=encoder.transform(df1) 
-df1_=scaler.transform(df1[Numero])
+df1_=scaler.transform(df1_[Numero])
 
 Y = rf.predict(df1_)
 
