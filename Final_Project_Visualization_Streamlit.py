@@ -66,12 +66,12 @@ df.NATIVE_COUNTRY=df.NATIVE_COUNTRY.str.replace(' United-States','USA')
 px.imshow(df.corr()) 
 
 
-"""def MI(series):
-    return mutual_info_score(series, df.TARGET)
+#def MI(series):
+#   return mutual_info_score(series, df.TARGET)
 
-df_MI = df[Catego].apply(MI)
-df_MI = df_MI.sort_values(ascending=False).to_frame(name='MI')
-display(df_MI)"""
+#df_MI = df[Catego].apply(MI)
+#df_MI = df_MI.sort_values(ascending=False).to_frame(name='MI')
+#display(df_MI)
 
 
 
