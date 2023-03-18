@@ -175,8 +175,20 @@ im = Image.open("50K$.jpg")
 image = np.array(im)
 st.image(image)
 
-AGE=st.slider('Select your age',1,100)
+Age=st.slider('Select your age',1,100)
+Education_Number = st.slider('Select your education years',1,25)
 
+HRS/WK = st.slider('How many hours are you supposed to work per year',1,50)
+ 
+Race=st.selectbox("Select your race",(' White',' Black', ' Asian-Pac-Islander', ' Amer-Indian-Eskimo' ,' Other'))
+Sex=st.selectbox("Select your race",(' Male' ,' Female'))
+
+Native_Country = st.selectbox("Select your country",('USA' ,'Other'))
+ 
+Occupation = st.selectbox("Select your occupation",(' Adm-clerical' ,' Exec-managerial',' Handlers-cleaners',' Prof-specialty',' Other-service' ,' Sales' ,' Transport-moving' ,' Farming-fishing',' Machine-op-inspct', ' Tech-support' ,' Craft-repair', ' Protective-serv',' Armed-Forces' ,' Priv-house-serv'))
+
+Capital_Gain = st.number_input() 
+Capital_Loss = st.number_input() 
 
 
 
