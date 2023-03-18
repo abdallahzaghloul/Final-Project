@@ -187,8 +187,8 @@ Native_Country = st.selectbox("Select your country",('USA' ,'Other'))
  
 Occupation = st.selectbox("Select your occupation",(' Adm-clerical' ,' Exec-managerial',' Handlers-cleaners',' Prof-specialty',' Other-service' ,' Sales' ,' Transport-moving' ,' Farming-fishing',' Machine-op-inspct', ' Tech-support' ,' Craft-repair', ' Protective-serv',' Armed-Forces' ,' Priv-house-serv'))
 
-Capital_Gain = st.number_input() 
-Capital_Loss = st.number_input() 
+Capital_Gain = st.number_input('Enter your capital gain') 
+Capital_Loss = st.number_input('Enter your capital loss') 
 
 
 
