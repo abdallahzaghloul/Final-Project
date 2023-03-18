@@ -143,24 +143,25 @@ Workclass = st.selectbox("Select your workclass",(' State-gov' ,' Self-emp-not-i
 Marital_Status =st.selectbox("Select your mzrital status",(' Never-married' ,' Married-civ-spouse', ' Divorced',' Married-spouse-absent' ,' Separated', ' Married-AF-spouse',' Widowed'))
   
 
-df1 = pd.read_csv('C:/Users/hp/Desktop/Data Science/Final Project/Adult_Ans.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
+#df1 = pd.read_csv('C:/Users/hp/Desktop/Data Science/Final Project/Adult_Ans.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
+df1 = pd.read_csv('Adult_Ans.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
 df1.columns  = [i.replace(' ','_') for i in df1.columns]
 df1.columns  = [i.upper() for i in df1.columns]
 
 
 
-df['AGE'].iloc[0]=Age
-df['EDUCATION_NUMBER'].iloc[0]=Education_Number
-df['HRS/WEEK'].iloc[0]=HRS_WK
-df['RACE'].iloc[0]=Race
-df['SEX'].iloc[0]=Sex
-df['NATIVE_COUNTRY'].iloc[0]=Native_Country
-df['OCCUPATION'].iloc[0]=Occupation
-df['CAPITAL_GAIN'].iloc[0]=Capital_Gain
-df['CAPITAL_LOSS'].iloc[0]=Capital_Loss
-df['RELATIONSHIP'].iloc[0]=Relationship
-df['WORK_CLASS'].iloc[0]=Workclass
-df['MARITAL_STATUS'].iloc[0]=Marital_Status
+df1['AGE'].iloc[0]=Age
+df1['EDUCATION_NUMBER'].iloc[0]=Education_Number
+df1['HRS/WEEK'].iloc[0]=HRS_WK
+df1['RACE'].iloc[0]=Race
+df1['SEX'].iloc[0]=Sex
+df1['NATIVE_COUNTRY'].iloc[0]=Native_Country
+df1['OCCUPATION'].iloc[0]=Occupation
+df1['CAPITAL_GAIN'].iloc[0]=Capital_Gain
+df1['CAPITAL_LOSS'].iloc[0]=Capital_Loss
+df1['RELATIONSHIP'].iloc[0]=Relationship
+df1['WORK_CLASS'].iloc[0]=Workclass
+df1['MARITAL_STATUS'].iloc[0]=Marital_Status
 
 
 Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX','NATIVE_COUNTRY']
