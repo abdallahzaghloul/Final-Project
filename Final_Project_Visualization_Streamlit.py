@@ -4,13 +4,16 @@ warnings.filterwarnings('ignore')
 import numpy as np
 import pandas as pd   
 from imblearn.over_sampling import SMOTE
+import itertools
 import streamlit as st
+from math import ceil #4
+import seaborn as sns #5
 import plotly.graph_objects as go  #6
 import plotly.express as px  #7
-from plotly.subplots import make_subplots 
+from plotly.subplots import make_subplots  #8
 from sklearn.model_selection import train_test_split  #9 
 
-
+from scipy import stats #19
 import plotly.figure_factory as ff #21
 from category_encoders import BinaryEncoder #23
 
@@ -22,20 +25,17 @@ from sklearn.model_selection import train_test_split
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
-
 from sklearn.ensemble import RandomForestClassifier
 
 
 
 #Reading & Ecxploting  Data
 
+#df = pd.read_csv('C:/Users/hp/Desktop/Data Science/Final Project/Adult.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
 df = pd.read_csv('Adult.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
 df.columns  = [i.replace(' ','_') for i in df.columns]
 df.columns  = [i.upper() for i in df.columns]
 df.head(3)
-
-
-
 
 df['TARGET'] = df.TARGET.str.replace('<=50K','0').str.replace('>50K','1')
 df['TARGET']=df.TARGET.astype('float')
@@ -176,8 +176,9 @@ pickle.dump(rf, open(filename, 'wb'))
 st.markdown(" <center>  <h1> Predicting Adult's Annual Salary </h1> </font> </center> </h1> ",
             unsafe_allow_html=True)
 
+im = Image.open("C://Users//hp//Desktop//Data Science//Final Project//50K$.jpg")
 im = Image.open("50K$.jpg")
-image = np.array(im)
+#image = np.array(im)
 st.image(image)
 
 
