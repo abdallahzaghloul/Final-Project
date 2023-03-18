@@ -167,7 +167,7 @@ df1['MARITAL_STATUS'].iloc[0]=Marital_Status
 Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX','NATIVE_COUNTRY']
 Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
 
-df1_=encoder.transform(df1[Catego1]) 
+df1_=encoder.transform(df1) 
 df1_=scaler.transform(df1[Numero])
 
 Y = rf.predict(df1_)
