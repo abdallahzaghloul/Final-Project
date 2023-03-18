@@ -178,7 +178,7 @@ st.image(image)
 Age=st.slider('Select your age',1,100)
 Education_Number = st.slider('Select your education years',1,25)
 
-HRS/WK = st.slider('How many hours are you supposed to work per year',1,50)
+HRS_WK = st.slider('How many hours are you supposed to work per year',1,50)
  
 Race=st.selectbox("Select your race",(' White',' Black', ' Asian-Pac-Islander', ' Amer-Indian-Eskimo' ,' Other'))
 Sex=st.selectbox("Select your race",(' Male' ,' Female'))
