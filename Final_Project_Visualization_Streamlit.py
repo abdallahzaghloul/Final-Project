@@ -97,7 +97,7 @@ X_train_sm, y_train_sm = smote.fit_resample(X_train_enc, y_train)
 # Random Forest Before SMOTE
 from sklearn.ensemble import RandomForestClassifier
 rf = RandomForestClassifier(random_state=42)
-rf.fit(X_train_sm, y_train)
+rf.fit(X_train_sm, y_train_sm)
 y_pred = rf.predict(X_test_sm)
 
 
