@@ -193,7 +193,18 @@ Capital_Loss = st.number_input('Enter your capital loss')
 
 Relationship = st.selectbox("Select your relationship status",(' Not-in-family' ,' Husband' ,' Wife', ' Own-child' ,' Unmarried',' Other-relative'))
 Workclass = st.selectbox("Select your workclass",(' State-gov' ,' Self-emp-not-inc', ' Private' ,' Federal-gov', ' Local-gov',' Self-emp-inc' ,' Without-pay' ))
+Marital_Status =st.selectbox("Select your mzrital status",(' Never-married' ,' Married-civ-spouse', ' Divorced',' Married-spouse-absent' ,' Separated', ' Married-AF-spouse',' Widowed'))
+  
+dic = {'AGE': [Age], 'WORK_CLASS': [Workclass],'EDUCATION_NUMBER':[Education_Number], 'MARITAL_STATUS':[Marital_Status] , 'OCCUPATION':[Occupation] , 'RELATIONSHIP':[Relationship] , 'RACE':[Race] , 'SEX':[Sex], 'CAPITAL_GAIN':[Capital_Gain], 'CAPITAL_LOSS':[Capital_Loss], 'HRS/WEEK':[HRS_WK],'NATIVE_COUNTRY':[Native_Country]}
+df1 = pd.DataFrame(dic)
 
+rf = RandomForestClassifier(random_state=42, n_estimators=grid.best_params_['n_estimators'], max_depth=grid.best_params_['max_depth'])
+rf.fit(X_train_sm, y_train_sm)
+Y = rf.predict(df1)
 
+if Y==1:
+    st.write(f'The expected salary would be >50K ')
+else 
+    st.write(f'The expected salary would be less than or = 50 K ')
 
 
