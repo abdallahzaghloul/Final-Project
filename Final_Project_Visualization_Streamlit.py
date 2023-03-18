@@ -63,7 +63,7 @@ df.NATIVE_COUNTRY=df.NATIVE_COUNTRY.str.replace(' United-States','USA')
 
 
 
-px.imshow(df.corr()) 
+fig5= px.imshow(df.corr()) 
 
 
 #def MI(series):
