@@ -35,8 +35,8 @@ Workclass = st.selectbox("Select your workclass",(' State-gov' ,' Self-emp-not-i
 Marital_Status =st.selectbox("Select your mzrital status",(' Never-married' ,' Married-civ-spouse', ' Divorced',' Married-spouse-absent' ,' Separated', ' Married-AF-spouse',' Widowed'))
   
 
-df1 = pd.read_csv('C:/Users/hp/Desktop/Data Science/Final Project/Adult_Ans.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
-#df1 = pd.read_csv('Adult_Ans.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
+#df1 = pd.read_csv('C:/Users/hp/Desktop/Data Science/Final Project/Adult_Ans.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
+df1 = pd.read_csv('Adult_Ans.csv', na_values=['N/A', 'no', ' ?','NaN','No info'])
 df1.columns  = [i.replace(' ','_') for i in df1.columns]
 df1.columns  = [i.upper() for i in df1.columns]
 
