@@ -1,8 +1,7 @@
 from PIL import Image
 import numpy as np
 import pandas as pd   
-import streamlit as st
-import from xgboost import XGBClassifier
+import streamlit as stfrom xgboost import XGBClassifier
 
 import pickle
 #Reading & Ecxploting  Data
