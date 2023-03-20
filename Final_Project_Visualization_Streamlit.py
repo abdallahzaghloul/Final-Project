@@ -60,7 +60,7 @@ Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX',
 Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
 
 filename = 'Adult.pkl'
-encoder_filename = 'Adult_Encoder.pkl'
+encoder_filename = 'Adult_encoder.pkl'
 scaler_filename = 'Adul_Scaler.pkl'
 
 encoder = pickle.load(open(encoder_filename, 'rb'))
