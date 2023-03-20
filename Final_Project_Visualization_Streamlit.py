@@ -83,7 +83,7 @@ def transform_user(user):
     return user_enc
 
 S = transform_user(df1)
-st.write(user_enc)
+st.write(S)
 predictions = model.predict(S)
 
     
