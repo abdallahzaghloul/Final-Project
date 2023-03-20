@@ -80,10 +80,6 @@ def transform_user(user):
     return user_enc
 
 def predict(user):
-
-    # Load the model from the file
-    model = pickle.load(open(filename, 'rb'))
-
     # Make predictions
     predictions = model.predict(user)
 
@@ -91,18 +87,14 @@ def predict(user):
 
 
 
-#if st.button('Calculate'):
-#    user_enc = transform_user(df1)
-#    predictions = model.predict(user_enc)
-#    if predictions ==1:
-#        st.write(f'The expected salary is to be >50K')
-#    else :
-#        st.write(f'The expected salary is to be <=50K')
-
-
 if st.button('Calculate'):
     user_enc = transform_user(df1)
-    st.write(user_enc)
+    predictions = predict(user_enc)
+    if predictions ==1:
+        st.write(f'The expected salary is to be >50K')
+    else :
+        st.write(f'The expected salary is to be <=50K')
+
 
 
 
