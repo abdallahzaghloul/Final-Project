@@ -59,17 +59,17 @@ df1['MARITAL_STATUS'].iloc[0]=Marital_Status
 Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX','NATIVE_COUNTRY']
 Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
 
-filename = 'Adult.sav'
-encoder_filename = 'Adult_Encoder.sav'
-scaler_filename = 'Adul_Scaler.sav'
+filename = 'Adult.pkl'
+encoder_filename = 'Adult_Encoder.pkl'
+scaler_filename = 'Adul_Scaler.pkl'
 
-encoder = pickle.load(open('Adult_Encoder.pkl', 'rb'))
+encoder = pickle.load(open(encoder_filename, 'rb'))
 
 # Loading scaler
-scaler = pickle.load(open('Adul_Scaler.pkl', 'rb'))
+scaler = pickle.load(open(scaler_filename, 'rb'))
 
 # loading the model
-model = pickle.load(open('Adult.pkl', 'rb'))
+model = pickle.load(open(filename, 'rb'))
 
 # A function to transform the user input
 def transform_user(user):
