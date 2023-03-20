@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 import pandas as pd   
 import streamlit as st
+import xgboost as xgb
 from xgboost import XGBClassifier
 
 import pickle
