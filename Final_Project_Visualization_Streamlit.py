@@ -59,12 +59,12 @@ df1['RELATIONSHIP'].iloc[0]=Relationship
 df1['WORK_CLASS'].iloc[0]=Workclass
 df1['MARITAL_STATUS'].iloc[0]=Marital_Status
 
-Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX','NATIVE_COUNTRY']
-Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
+Catego=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX','NATIVE_COUNTRY']
+Numero=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
 
 filename = 'Adult.pkl'
-encoder_filename = 'Adult_encoder.pkl'
-scaler_filename = 'Adul_Scaler.pkl'
+encoder_filename = 'Adult_Encoder.pkl'
+scaler_filename = 'Adult_Scaler.pkl'
 
 encoder = pickle.load(open(encoder_filename, 'rb'))
 
