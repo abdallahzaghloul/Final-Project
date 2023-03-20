@@ -8,6 +8,7 @@ import pickle
     
 st.markdown(" <center>  <h1> Predicting Adult's Annual Salary </h1> </font> </center> </h1> ",
             unsafe_allow_html=True)
+
 #im = Image.open("C://Users//hp//Desktop//Data Science//Final Project//50K$.jpg")
 im = Image.open("50K$.jpg")
 image = np.array(im)
@@ -55,25 +56,58 @@ df1['RELATIONSHIP'].iloc[0]=Relationship
 df1['WORK_CLASS'].iloc[0]=Workclass
 df1['MARITAL_STATUS'].iloc[0]=Marital_Status
 
-
 Catego1=['WORK_CLASS','MARITAL_STATUS','OCCUPATION','RELATIONSHIP','RACE','SEX','NATIVE_COUNTRY']
 Numero1=['AGE','EDUCATION_NUMBER','CAPITAL_GAIN', 'CAPITAL_LOSS', 'HRS/WEEK']
-st.write(df1)
-#df1_=encoder.transform(df1[Catego1]) 
-#df1_=scaler.transform(df1[Numero])
 
-#Y = rf.predict(df1_)
+filename = 'Adult.sav'
+encoder_filename = 'Adult_Encoder.sav'
+scaler_filename = 'Adul_Scaler.sav'
+
+encoder = pickle.load(open(encoder_filename, 'rb'))
+
+# Loading encoder
+encoder = pickle.load(open(encoder_filename, 'rb'))
+
+# Loading scaler
+scaler = pickle.load(open(scaler_filename, 'rb'))
+
+# loading the model
+model = pickle.load(open(filename, 'rb'))
 
 
-#if st.button('Calculate'):
-#    if Y==1:
-#        st.write(f'The expected salary would be >50K ')
-    
-#    else: 
-#        st.write(f'The expected salary would be less than or = 50 K ')
 
 
 
+
+# A function to transform the user input
+def transform_user(user):
+    # Transform the user input
+    user_enc = encoder.transform(user)
+    user_enc[Numero1] = scaler.transform(user_enc[Numero1])
+
+    return user_enc
+
+def predict(user):
+
+    # Load the model from the file
+    model = pickle.load(open(filename, 'rb'))
+
+    # Make predictions
+    predictions = model.predict(user)
+
+    return predictions
+
+
+
+if st.button('Calculate'):
+    user_enc = transform_user(df1)
+    predictions = model.predict(user_enc)
+
+
+if predictions ==1:
+    st.write(f'The expected salary is to be >50K')
+else :
+    st.write(f'The expected salary is to be <=50K')
 
 
 
