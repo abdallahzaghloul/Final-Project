@@ -102,6 +102,7 @@ def predict(user):
 
 if st.button('Calculate'):
     user_enc = transform_user(df1)
+    st.write(user_enc)
 
 
 
