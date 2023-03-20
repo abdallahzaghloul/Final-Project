@@ -82,6 +82,7 @@ def transform_user(user):
 
     return user_enc
 
+st.write(user_enc)
 
 if st.button('Calculate'):
     user_enc = transform_user(df1)
