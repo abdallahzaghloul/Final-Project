@@ -78,7 +78,7 @@ model = pickle.load(open(filename, 'rb'))
 def transform_user(user):
     # Transform the user input
     user_enc = encoder.transform(user)
-    user_enc[Numero1] = scaler.transform(user_enc[Numero1])
+    user_enc[Numero] = scaler.transform(user_enc[Numero])
 
     return user_enc
 
