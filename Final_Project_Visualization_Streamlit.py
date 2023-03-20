@@ -63,13 +63,13 @@ filename = 'Adult.sav'
 encoder_filename = 'Adult_Encoder.sav'
 scaler_filename = 'Adul_Scaler.sav'
 
-encoder = pickle.load(open('Adult_Encoder.sav', 'rb'))
+encoder = pickle.load(open('Adult_Encoder.pkl', 'rb'))
 
 # Loading scaler
-scaler = pickle.load(open('Adul_Scaler.sav', 'rb'))
+scaler = pickle.load(open('Adul_Scaler.pkl', 'rb'))
 
 # loading the model
-model = pickle.load(open('Adult.sav', 'rb'))
+model = pickle.load(open('Adult.pkl', 'rb'))
 
 # A function to transform the user input
 def transform_user(user):
