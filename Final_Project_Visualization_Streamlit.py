@@ -79,17 +79,10 @@ def transform_user(user):
 
     return user_enc
 
-def predict(user):
-    # Make predictions
-    predictions = model.predict(user)
-
-    return predictions
-
-
 
 if st.button('Calculate'):
     user_enc = transform_user(df1)
-    predictions = predict(user_enc)
+    predictions = model.predict(user_enc)
     if predictions ==1:
         st.write(f'The expected salary is to be >50K')
     else :
