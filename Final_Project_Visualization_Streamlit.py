@@ -95,8 +95,6 @@ def transform_user(user):
 
 S = transform_user(df1)
 st.write(S)
-predictions = model.predict(S)
-
     
 if st.button('Calculate'):
     if predictions ==1:
