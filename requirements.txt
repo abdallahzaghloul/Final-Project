@@ -1,6 +1,6 @@
 pandas
 numpy 
-scikit-learn
+scikit-learn==1.0.2
 Category-encoders
 xgboost==1.7.4
 
