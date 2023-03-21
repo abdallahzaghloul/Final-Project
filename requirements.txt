@@ -1,8 +1,8 @@
 scikit-learn
 numpy
 pandas
-xgboost==1.7.4
+XGBoost==1.7.4
 Category-encoders
 
 Scikit-learn
-Xgboost
+
