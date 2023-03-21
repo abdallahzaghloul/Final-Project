@@ -14,15 +14,8 @@ from sklearn.impute import SimpleImputer  #11
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder , MinMaxScaler , StandardScaler, RobustScaler #12
 from sklearn.linear_model import LinearRegression  #13
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix, plot_confusion_matrix , r2_score  ,mean_squared_error , mutual_info_score,roc_auc_score
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
 
 from xgboost import XGBClassifier
-from lightgbm import LGBMClassifier
-from catboost import CatBoostClassifier
-from sklearn import svm
-from sklearn.ensemble import RandomForestClassifier
    
     
     
