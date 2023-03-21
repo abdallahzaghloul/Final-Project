@@ -1,4 +1,4 @@
-xgboost==1.6.2
+xgboost
 pandas
 numpy 
 scikit=learn
